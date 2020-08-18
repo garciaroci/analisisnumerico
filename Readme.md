@@ -1,4 +1,4 @@
-# Apriximación por Mínimos Cuadrados
+# Aproximación por Mínimos Cuadrados
 > Aproximación Discreta
 
 

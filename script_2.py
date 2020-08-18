@@ -67,6 +67,8 @@ for k in range(0, n):  # Sumatoria
     f_f1 += y[k] * f1[k]
     f_f2 += y[k] * f2[k]
 
+# Armamos las matrices
+
 A = np.array([
     [f1_f1, f2_f1],
     [f1_f2, f2_f2]
@@ -100,7 +102,40 @@ print('la función que mejor representa a los datos respecto del subespacio dado
 print()
 print("y = %s * %s + %s * %s" %(c0, f1_expression, c1, f2_expression))
 print()
+
+print('Aproximamos algunos valores')
 print()
+
+q = 1.3
+mathparser.expression = f1_expression
+mathparser.variables['x'] = q
+f1_x = mathparser.evaluate()
+
+mathparser.expression = f2_expression
+mathparser.variables['x'] = q
+f2_x = mathparser.evaluate()
+
+result = (c0 * f1_x) + (c1 * f2_x)
+
+print("f(x=%s) = %s" % (q, result))
+print()
+
+q = 2
+mathparser.expression = f1_expression
+mathparser.variables['x'] = q
+f1_x = mathparser.evaluate()
+
+mathparser.expression = f2_expression
+mathparser.variables['x'] = q
+f2_x = mathparser.evaluate()
+
+result = (c0 * f1_x) + (c1 * f2_x)
+
+print("f(x=%s) = %s" % (q, result))
+print()
+
+#Calculamos el error del metodo
+
 print('Calculamos el error del método')
 
 delta = 0

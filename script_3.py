@@ -150,6 +150,28 @@ print('la función que mejor representa a los datos respecto del subespacio dado
 print("y = %s * %s + %s * %s + %s * %s" %(c0, f1_expression, c1, f2_expression, c2, f3_expression))
 print()
 
+print('Aproximamos algunos valores')
+print()
+
+q = 1.3
+mathparser.expression = f1_expression
+mathparser.variables['x'] = q
+f1_x = mathparser.evaluate()
+
+mathparser.expression = f2_expression
+mathparser.variables['x'] = q
+f2_x = mathparser.evaluate()
+
+mathparser.expression = f3_expression
+mathparser.variables['x'] = q
+f3_x = mathparser.evaluate()
+
+result = (c0 * f1_x) + (c1 * f2_x) + (c2 * f3_x)
+
+print("f(x=%s) = %s" % (q, result))
+print()
+
+# Calculamos el error del metodo
 print('Calculamos el error del método')
 print()
 
@@ -168,7 +190,6 @@ for k in range(0, n):  # Sumatoria
     (c2 * y[k] * f3[k]) => c2 <f,f3>
     """
     delta += (y[k])**2 - ((c0 * y[k] * f1[k]) + (c1 * y[k] * f2[k]) + (c2 * y[k] * f3[k]))
-
 
 e = np.sqrt(abs(delta))
 

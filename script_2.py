@@ -58,7 +58,7 @@ f2_f2 = 0
 f_f1 = 0
 f_f2 = 0
 
-for k in range(0, n):  # Sumatoria
+for k in range(n):  # Sumatoria
     f1_f1 += f1[k] * f1[k]
     f1_f2 += f1[k] * f2[k]
     f2_f1 += f2[k] * f1[k]
@@ -140,11 +140,9 @@ print('Calculamos el error del método')
 
 delta = 0
 
-for k in range(0, n):  # Sumatoria
+for k in range(n):  # Sumatoria
     """
     Sumatoria: += 
-    ---
-    y[k])**2 => f(x)^2
     ----
     (c0 * y[k] * f1[k]) => c0 <f,f1>
     ----

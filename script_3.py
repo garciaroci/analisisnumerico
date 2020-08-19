@@ -7,8 +7,8 @@ mathparser.addDefaultFunctions()
 mathparser.addDefaultVariables()
 
 # Datos de entrada
-x = [1.00, 2.00, 3.00, 4.00, 5.00]
-y = [2.00, 3.00, 5.00, 7.00, 3.00]
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 3]
 
 
 # Completamos la tabla para las funciones básicas 
